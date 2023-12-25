@@ -8,6 +8,8 @@ const client = createClient({
   apiType: 'cdn',
 })
 
+export const perPage = 10
+
 export const getArticles = cache(async () => {
   const { items } = await client.getContents<Article>({
     appUid: 'blog',
@@ -25,8 +27,8 @@ export const getPaginatedArticles = cache(async (page: number) => {
     appUid: 'blog',
     modelUid: 'article',
     query: {
-      limit: 2,
-      skip: (page - 1) * 2,
+      limit: perPage,
+      skip: (page - 1) * perPage,
       select: ['_id', 'title', 'slug', 'coverImage', 'tags', 'author', '_sys'],
     },
   })
@@ -53,8 +55,8 @@ export const getArticlesByTag = cache(async (tagId: string, page: number) => {
     appUid: 'blog',
     modelUid: 'article',
     query: {
-      limit: 2,
-      skip: (page - 1) * 2,
+      limit: perPage,
+      skip: (page - 1) * perPage,
       tags: {
         in: [tagId],
       },

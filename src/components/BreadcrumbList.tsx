@@ -20,7 +20,17 @@ export const BreadcrumbList = ({ list }: Props) => {
           return (
             <div className='flex flex-nowrap gap-2' key={item.href}>
               <Link href={item.href}>
-                <p className='text-gray-500 hover:underline'>{item.title}</p>
+                <p
+                  className='text-gray-500 text-sm hover:underline'
+                  style={{
+                    textOverflow: 'ellipsis',
+                    overflow: 'hidden',
+                    whiteSpace: 'nowrap',
+                    maxWidth: '200px',
+                  }}
+                >
+                  {item.title}
+                </p>
               </Link>
               {!isLast && <span className='text-gray-500'>{'>'}</span>}
             </div>
