@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import type { Article } from '@/types/article'
 import { getArticleBySlug, getArticles, getTags } from '@/libs/newtClient'
 import Image from 'next/image'
-import { ShareButtons } from '@/components/ShareButtons'
+import { GridShareButtons, ShareButtons } from '@/components/ShareButtons'
 import ReactMarkdown from 'react-markdown'
 import type { ClassAttributes, HTMLAttributes } from 'react'
 import type { ExtraProps } from 'react-markdown'
@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         },
       ],
       description: article?.meta?.description,
-      url: article?.coverImage.src,
+      url: `https://www.fractalblog.com/articles/${article?.slug}`,
       siteName: article?.title,
       locale: 'ja_JP',
       type: 'website',
@@ -126,9 +126,13 @@ export default async function Article({ params }: Props) {
           >
             {article.body}
           </ReactMarkdown>
+          <hr className='mt-10' />
+          <div className='my-3'>
+            <GridShareButtons article={article} />
+          </div>
           <div className='hidden lg:block absolute top-10 w-16 -left-16 h-[100%]'>
             <div className='sticky top-16 pt-10 left-0 ...'>
-              <ShareButtons />
+              <ShareButtons article={article} />
             </div>
           </div>
           <div className='hidden lg:block absolute top-48 w-[22%] -right-[calc(22%_+_1.5rem)] h-[100%]'>

@@ -6,23 +6,7 @@ export type Article = {
   }
   title: string
   slug: string
-  meta: {
-    title: string
-    description: string
-    ogImage: {
-      _id: string
-      altText: string
-      description: string
-      fileName: string
-      fileSize: number
-      fileType: string
-      height: 924
-      metadata: {}
-      src: string
-      title: string
-      width: number
-    }
-  }
+  meta: Meta
   body: string
   coverImage: {
     _id: string
@@ -49,6 +33,24 @@ export type Tag = {
   }
   name: string
   slug: string
+}
+
+export type Meta = {
+  title: string
+  description: string
+  ogImage: {
+    _id: string
+    altText: string
+    description: string
+    fileName: string
+    fileSize: number
+    fileType: string
+    height: number
+    metadata: {}
+    src: string
+    title: string
+    width: number
+  }
 }
 
 export type Author = {

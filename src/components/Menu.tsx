@@ -54,22 +54,22 @@ export default function Menu() {
           <span
             className={
               isOpen
-                ? 'block w-8 h-[1px] bg-gray-600 rotate-45 duration-300'
-                : 'block w-8 h-[1px] bg-gray-600 duration-300'
+                ? 'block w-6 h-[1px] bg-gray-600 rotate-45 duration-300'
+                : 'block w-6 h-[1px] bg-gray-600 duration-300'
             }
           />
           <span
             className={
               isOpen
                 ? 'block opacity-0 duration-300'
-                : 'block w-8 h-[1px] my-2 bg-gray-600 duration-300'
+                : 'block w-6 h-[1px] my-2 bg-gray-600 duration-300'
             }
           />
           <span
             className={
               isOpen
-                ? 'block w-8 h-[1px] bg-gray-600 -rotate-45 duration-300'
-                : 'block w-8 h-[1px] bg-gray-600  duration-300'
+                ? 'block w-6 h-[1px] bg-gray-600 -rotate-45 duration-300'
+                : 'block w-6 h-[1px] bg-gray-600  duration-300'
             }
           />
         </div>

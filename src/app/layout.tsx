@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         url: 'https://fractal-tech.assets.newt.so/v1/de924992-aca0-4f4f-bb56-12aa888ddfbe/tech-blog-cover.png',
       },
     ],
-    url: 'https://fractal.tech',
+    url: 'https://www.fractalblog.com/',
     siteName: 'fractal tech blog',
   },
 }
