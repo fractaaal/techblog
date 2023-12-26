@@ -103,6 +103,13 @@
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  list-style-type: square;
+  background-color: #f9f4ff;
+  border: solid 1px #e5ccff;
 }
 
 .cms-content ol {
@@ -111,6 +118,8 @@
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 1rem;
+  list-style-type: decimal;
+  padding-left: 3rem;
 }
 
 .cms-content li {
@@ -158,14 +167,27 @@
   background-color: #e2e8f0;
 }
 
+.code-file-name {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: black;
+  padding: 0.4rem 1rem !important;
+  border-radius: 0.25rem 0.25rem 0 0;
+  background-color: #e2e8f0;
+}
+
 .cms-content pre {
+  position: relative;
+  z-index: 10;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
+  margin-top: -0.25rem !important;
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 1.2rem 1.2rem !important;
   overflow-x: auto;
-  border-radius: 0 0 0.25rem 0.25rem;
+  border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
   background-color: black;
 }
 
@@ -174,13 +196,16 @@
   font-weight: 400;
   line-height: 1.5;
   color: white;
+  margin-top: -0.5rem !important;
   margin-bottom: 1rem;
-  padding: 0.2rem 0.4rem;
+  padding: 0.2rem 0.4rem !important;
   border-radius: 0 0 0.25rem 0.25rem;
   background-color: #282a36;
 }
 
 .code-file-name {
+  position: relative;
+  z-index: 20;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
@@ -201,39 +226,44 @@
 /* モバイル用のレスポンシブデザイン */
 @media (max-width: 640px) {
   .cms-content h1 {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 
   .cms-content h2 {
-    font-size: 0.8rem;
+    font-size: 1.4rem;
   }
 
   .cms-content h3 {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 
   .cms-content h4 {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 
   .cms-content p {
-    font-size: 0.6rem;
+    font-size: 1rem;
+    line-height: 2rem;
   }
 
   .cms-content ul {
-    font-size: 0.6rem;
+    font-size: 1rem;
+    line-height: 2rem;
   }
 
   .cms-content ol {
-    font-size: 0.6rem;
+    font-size: 1rem;
+    line-height: 2rem;
   }
 
   .cms-content li {
-    font-size: 0.6rem;
+    font-size: 1rem;
+    line-height: 2rem;
   }
 
   .cms-content a {
-    font-size: 0.6rem;
+    font-size: 1rem;
+    line-height: 2rem;
   }
 
   .cms-content img {
@@ -243,11 +273,13 @@
   }
 
   .cms-content blockquote {
-    font-size: 0.6rem;
+    font-size: 1rem;
+    line-height: 2rem;
   }
 
   .cms-content code {
-    font-size: 0.5rem;
+    font-size: 1rem;
+    line-height: 2rem;
   }
 
   .cms-content pre {
@@ -255,14 +287,18 @@
   }
 
   .cms-content pre code {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
   }
 
   .code-file-name {
-    font-size: 0.6rem;
+    font-size: 1rem;
+    line-height: 2rem;
   }
 
   .katex {
     font-size: 1rem;
+    line-height: 2rem;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 }

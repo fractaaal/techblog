@@ -14,7 +14,7 @@ export const ArticleList = ({ articles }: { articles: Array<Article> }) => {
             <div className='flex justify-between items-start gap-3'>
               <Link
                 href={`/articles/${article.slug}`}
-                className='w-2/5 rounded-md overflow-hidden h-20 sm:h-32 md:h-48 lg:h-48 flex justify-center items-center hover:bg-opacity-40'
+                className='w-2/5 rounded-md overflow-hidden h-20 sm:h-32 md:h-40 lg:h-40 flex justify-center items-center hover:bg-opacity-40'
                 style={{
                   backgroundImage: `url(${article.coverImage ? article.coverImage.src : ''})`,
                   backgroundSize: 'cover',
