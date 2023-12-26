@@ -38,9 +38,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: article?.title,
-    description: '投稿詳細ページです',
+    description: article?.meta?.description,
     openGraph: {
       title: article?.title,
+      images: [
+        {
+          url: article?.coverImage.src || '',
+          width: article?.coverImage?.width,
+          height: article?.coverImage?.height,
+        },
+      ],
+      description: article?.meta?.description,
       url: article?.coverImage.src,
       siteName: article?.title,
       locale: 'ja_JP',

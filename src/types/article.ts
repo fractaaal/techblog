@@ -6,6 +6,23 @@ export type Article = {
   }
   title: string
   slug: string
+  meta: {
+    title: string
+    description: string
+    ogImage: {
+      _id: string
+      altText: string
+      description: string
+      fileName: string
+      fileSize: number
+      fileType: string
+      height: 924
+      metadata: {}
+      src: string
+      title: string
+      width: number
+    }
+  }
   body: string
   coverImage: {
     _id: string
