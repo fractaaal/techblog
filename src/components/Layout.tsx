@@ -38,7 +38,7 @@ export const Layout = ({ children }: Props) => {
       </main>
       <footer className='bg-blue-100 py-14 flex justify-center items-center font-mono px-6'>
         <div>
-          <h2 className='mb-10 text-center'>fractal tech blog</h2>
+          <h2 className='mb-10 text-center'>©fractal tech blog</h2>
           <Link href='/privacy' className='underline text-sm text-center'>
             プライバシーポリシー
           </Link>
