@@ -17,6 +17,7 @@ import { TagList } from '@/components/TagList'
 import { EditHistoryList } from '@/components/EditHistoryList'
 import { Profile } from '@/components/Profile'
 import { TagGroup } from '@/components/TagGroup'
+import { H2, Toc, TocH2 } from '@/components/Toc'
 
 type Props = {
   params: {
@@ -100,7 +101,7 @@ export default async function Article({ params }: Props) {
   if (!article) return
 
   return (
-    <div className='lg:max-w-4xl relative mx-auto pb-10 px-3'>
+    <div className='lg:max-w-5xl relative mx-auto pb-10 px-3'>
       <div>
         <BreadcrumbList list={[{ title: article.title, href: '' }]} />
       </div>
@@ -113,12 +114,15 @@ export default async function Article({ params }: Props) {
       <div className='flex justify-start gap-2 lg:w-4/5 my-4'>
         <TagList tags={article.tags} />
       </div>
-
-      <div className='lg:flex lg:justify-center lg:items-start lg:gap-6 w-full'>
+      <div className='lg:hidden my-4'>
+        <Toc article={article} />
+      </div>
+      <div className='lg:flex lg:justify-center lg:items-start lg:gap-3 w-full'>
         <div className='relative lg:w-4/5 pb-20 bg-white rounded-xl p-4'>
           <ReactMarkdown
             components={{
               pre: Pre,
+              h2: H2,
             }}
             rehypePlugins={[rehypeKatex]}
             remarkPlugins={[remarkMath]}
@@ -130,14 +134,17 @@ export default async function Article({ params }: Props) {
           <div className='my-3'>
             <GridShareButtons article={article} />
           </div>
-          <div className='hidden lg:block absolute top-10 w-16 -left-16 h-[100%]'>
+          <div className='hidden min-[1150px]:block absolute top-10 w-16 -left-16 h-[100%]'>
             <div className='sticky top-16 pt-10 left-0 ...'>
               <ShareButtons article={article} />
             </div>
           </div>
-          <div className='hidden lg:block absolute top-48 w-[22%] -right-[calc(22%_+_1.5rem)] h-[100%]'>
+          <div className='hidden lg:block absolute top-48 w-[11.5rem] -right-[calc(11.5rem_+_0.8rem)] h-[100%]'>
             <div className='sticky top-0 pt-10 left-0 ...'>
-              <div className='bg-white rounded-xl px-4 py-3 mt-6'>
+              <div className='mt-4'>
+                <Toc article={article} />
+              </div>
+              <div className='bg-white rounded-xl px-4 py-3 mt-3'>
                 <p className='text-sm lg:text-xl font-bold mb-4'>tags</p>
                 <TagGroup tags={tags} />
               </div>
