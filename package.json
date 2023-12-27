@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/gtag.js": "^0.0.18",
     "@types/react-syntax-highlighter": "^15.5.11",
     "microcms-js-sdk": "^2.7.0",
     "newt-client-js": "^3.2.8",
