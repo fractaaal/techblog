@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .cms-content h1 {
   padding: 0.2rem 0.4rem;
   position: relative;
