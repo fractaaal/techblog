@@ -49,6 +49,8 @@ export default function Menu() {
       <button
         className='fixed flex justify-center items-center bottom-10 right-4 bg-white w-12 h-12 rounded-full shadow-lg z-50 space-y-2 md:hidden'
         onClick={handleMenuOpen}
+        id='menu-button'
+        aria-label='メニューボタン'
       >
         <div className=''>
           <span
