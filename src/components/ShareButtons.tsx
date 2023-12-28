@@ -28,16 +28,28 @@ export const ShareButtons = ({ article }: Props) => {
 
   return (
     <div className='w-full flex flex-nowrap flex-col gap-4'>
-      <TwitterShareButton url={url} title={quote}>
+      <TwitterShareButton url={url} title={quote} id='x-button' aria-label='Xシェアボタン'>
         <FaXTwitter size='2rem' />
       </TwitterShareButton>
-      <FacebookShareButton url={url} title={quote}>
+      <FacebookShareButton
+        url={url}
+        title={quote}
+        id='facebook-button'
+        aria-label='Facebookシェアボタン'
+      >
         <FacebookIcon size={36} round />
       </FacebookShareButton>
-      <LineShareButton url={url} title={quote}>
+      <LineShareButton url={url} title={quote} id='line-button' aria-label='LINEシェアボタン'>
         <LineIcon size={36} round />
       </LineShareButton>
-      <HatenaShareButton url={url} title={quote} windowWidth={660} windowHeight={460}>
+      <HatenaShareButton
+        url={url}
+        title={quote}
+        windowWidth={660}
+        windowHeight={460}
+        id='hatena-button'
+        aria-label='はてなブックマークシェアボタン'
+      >
         <HatenaIcon size={36} round />
       </HatenaShareButton>
     </div>
@@ -49,16 +61,28 @@ export const GridShareButtons = ({ article }: Props) => {
   const quote = article ? generateShareText(article) : QUOTE
   return (
     <div className='flex justify-center items-center gap-3'>
-      <TwitterShareButton url={url} title={quote}>
+      <TwitterShareButton url={url} title={quote} id='x-button' aria-label='Xシェアボタン'>
         <FaXTwitter size='2rem' />
       </TwitterShareButton>
-      <FacebookShareButton url={url} title={quote}>
+      <FacebookShareButton
+        url={url}
+        title={quote}
+        id='facebook-button'
+        aria-label='Facebookシェアボタン'
+      >
         <FacebookIcon size={36} round />
       </FacebookShareButton>
-      <LineShareButton url={url} title={quote}>
+      <LineShareButton url={url} title={quote} id='line-button' aria-label='LINEシェアボタン'>
         <LineIcon size={36} round />
       </LineShareButton>
-      <HatenaShareButton url={url} title={quote} windowWidth={660} windowHeight={460}>
+      <HatenaShareButton
+        url={url}
+        title={quote}
+        windowWidth={660}
+        windowHeight={460}
+        id='hatena-button'
+        aria-label='はてなブックマークシェアボタン'
+      >
         <HatenaIcon size={36} round />
       </HatenaShareButton>
     </div>

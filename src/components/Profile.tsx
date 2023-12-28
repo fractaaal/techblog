@@ -4,7 +4,7 @@ export const Profile = () => {
   return (
     <div className='flex lg:flex-col items-center justify-center'>
       <div className='w-1/2 max-w-20 mt-4 border border-gray-300 rounded-full overflow-hidden'>
-        <Image src='/images/fractal.png' width={200} height={200} alt='' />
+        <Image src='/images/fractal.png' width={200} height={200} alt='fractal' />
       </div>
 
       <div className='ml-3 lg:ml-0'>
