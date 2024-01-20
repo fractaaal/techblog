@@ -31,7 +31,7 @@ export const Layout = ({ children }: Props) => {
           </div>
         </div>
       </header>
-      <main className='bg-gray-100 font-mono pt-4'>
+      <main className='bg-gray-100 font-mono pt-4 w-[100vw] overflow-x-hidden'>
         {children}
         {/* 3本線の丸い形のハンバーガーメニュー */}
         <Menu />

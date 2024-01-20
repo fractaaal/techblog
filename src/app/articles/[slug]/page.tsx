@@ -18,6 +18,7 @@ import { EditHistoryList } from '@/components/EditHistoryList'
 import { Profile } from '@/components/Profile'
 import { TagGroup } from '@/components/TagGroup'
 import { H2, Toc, TocH2 } from '@/components/Toc'
+import { CopyButton } from '@/components/CopyButton'
 
 type Props = {
   params: {
@@ -87,9 +88,12 @@ const Pre = ({
           <span>{fileName}</span>
         </div>
       )}
-      <SyntaxHighlighter language={language} style={dracula}>
-        {String(code).replace(/\n$/, '')}
-      </SyntaxHighlighter>
+      <div className='relative z-10'>
+        <CopyButton text={String(code).replace(/\n$/, '')} />
+        <SyntaxHighlighter language={language} style={dracula}>
+          {String(code).replace(/\n$/, '')}
+        </SyntaxHighlighter>
+      </div>
     </>
   )
 }
