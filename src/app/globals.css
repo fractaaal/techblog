@@ -169,6 +169,12 @@ html {
   padding: 0.2rem 0.4rem;
   border-radius: 0.25rem;
   background-color: #e2e8f0;
+  white-space: pre-wrap;
+}
+
+.cms-content p code {
+  white-space: pre-wrap; /* テキストを折り返し、空白と改行を保持 */
+  max-width: 90vw;
 }
 
 .code-file-name {
@@ -190,6 +196,7 @@ html {
   margin-top: -0.25rem !important;
   margin-bottom: 1rem;
   padding: 1.2rem 1.2rem !important;
+  padding-top: 1.6rem !important;
   overflow-x: auto;
   border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
   background-color: black;
