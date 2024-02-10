@@ -39,6 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = await getArticleBySlug(slug)
 
   return {
+    metadataBase: new URL('https://www.fractalblog.com/'),
     title: article?.title,
     description: article?.meta?.description,
     openGraph: {

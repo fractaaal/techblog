@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Layout } from '@/components/Layout'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
+import { Suspense } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,17 +25,20 @@ export const metadata: Metadata = {
     url: 'https://www.fractalblog.com/',
     siteName: 'fractal tech blog',
   },
+  metadataBase: new URL('https://www.fractalblog.com/'),
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='ja'>
-      <head>
-        <GoogleAnalytics />
-      </head>
-      <body className={inter.className}>
-        <Layout>{children}</Layout>
-      </body>
-    </html>
+    <Suspense fallback='loading...'>
+      <html lang='ja'>
+        <head>
+          <GoogleAnalytics />
+        </head>
+        <body className={inter.className}>
+          <Layout>{children}</Layout>
+        </body>
+      </html>
+    </Suspense>
   )
 }
