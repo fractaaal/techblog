@@ -145,7 +145,7 @@ export default async function Article({ params }: Props) {
             </div>
           </div>
           <div className='hidden lg:block absolute top-48 w-[11.5rem] -right-[calc(11.5rem_+_0.8rem)] h-[100%]'>
-            <div className='sticky top-0 pt-10 left-0 ...'>
+            <div className='sticky top-0 pt-10 left-0 pb-56'>
               <div className='mt-4'>
                 <Toc article={article} />
               </div>

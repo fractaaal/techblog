@@ -30,15 +30,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <Suspense fallback='loading...'>
-      <html lang='ja'>
-        <head>
-          <GoogleAnalytics />
-        </head>
-        <body className={inter.className}>
-          <Layout>{children}</Layout>
-        </body>
-      </html>
-    </Suspense>
+    <html lang='ja'>
+      <head>
+        <GoogleAnalytics />
+      </head>
+      <body className={inter.className}>
+        <Layout>
+          <Suspense>{children} </Suspense>
+        </Layout>
+      </body>
+    </html>
   )
 }
