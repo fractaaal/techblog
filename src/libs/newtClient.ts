@@ -8,7 +8,7 @@ const client = createClient({
   apiType: 'cdn',
 })
 
-export const perPage = 10
+export const perPage = 5
 
 export const getArticles = cache(async () => {
   const { items } = await client.getContents<Article>({

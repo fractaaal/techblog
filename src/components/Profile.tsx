@@ -10,7 +10,7 @@ export const Profile = () => {
       <div className='ml-3 lg:ml-0'>
         <h2 className=''>fractal</h2>
         <p className='text-xs'>
-          元機械エンジニア。Next.js/Railsをメインに開発。機械学習,Kaggle,数学を中心に執筆
+          元機械エンジニア。Next.js/Railsをメインに開発。Web開発、機械学習、数学を中心に執筆
         </p>
       </div>
     </div>
